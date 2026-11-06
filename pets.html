@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pets - Harshitha's Pet Care</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🐾 My Pets</h1>
+        <nav>
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/pets.html">My Pets</a>
+            <a href="/login.html" id="logoutBtn">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add New Pet</h2>
+
+            <form id="petForm">
+                <label for="pet_name">Pet Name</label>
+                <input type="text" id="pet_name" required>
+
+                <label for="species">Species</label>
+                <select id="species" required>
+                    <option value="">Select Species</option>
+                    <option value="Dog">Dog</option>
+                    <option value="Cat">Cat</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="breed">Breed</label>
+                <input type="text" id="breed">
+
+                <label for="age">Age</label>
+                <input type="number" id="age" min="0">
+
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <button type="submit">Add Pet</button>
+                <p id="petMessage"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>My Pet List</h2>
+            <div id="petList">Loading pets...</div>
+        </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

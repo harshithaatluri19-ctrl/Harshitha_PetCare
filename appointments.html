@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Harshitha's Pet Care</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📅 Veterinary Appointments</h1>
+
+        <nav>
+            <a href="/dashboard.html">Dashboard</a>
+            <a href="/pets.html">My Pets</a>
+            <a href="/appointments.html">Appointments</a>
+            <a href="/login.html" id="logoutBtn">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Book an Appointment</h2>
+
+            <form id="appointmentForm">
+
+                <label for="pet_id">Select Pet</label>
+                <select id="pet_id" required>
+                    <option value="">Select Your Pet</option>
+                </select>
+
+                <label for="vet_id">Select Veterinarian</label>
+                <select id="vet_id" required>
+                    <option value="">Select Veterinarian</option>
+                </select>
+
+                <label for="appointment_date">Appointment Date</label>
+                <input type="date" id="appointment_date" required>
+
+                <label for="appointment_time">Appointment Time</label>
+                <input type="time" id="appointment_time" required>
+
+                <label for="reason">Reason for Appointment</label>
+                <textarea id="reason" rows="4"
+                    placeholder="Enter reason for appointment"
+                    required></textarea>
+
+                <button type="submit">Book Appointment</button>
+
+                <p id="appointmentMessage"></p>
+            </form>
+        </section>
+
+        <section>
+            <h2>My Appointments</h2>
+            <div id="appointmentList">
+                Loading appointments...
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
